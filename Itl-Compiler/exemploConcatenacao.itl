@@ -1,0 +1,7 @@
+iniziare principale(){
+
+	essere eixo = "foka";
+
+	eixo .= "au";
+
+}

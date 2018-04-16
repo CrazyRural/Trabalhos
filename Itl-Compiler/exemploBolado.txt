@@ -1,0 +1,53 @@
+tutto a = 0;
+
+iniziare principale(){	
+	
+	corda a = 'bc', altris = 'nan', out;
+
+	tutto b = 0;
+
+	>//
+		tutto a = 2;
+	|\<
+
+	fare{
+		tutto j = 10;
+	}(b !! 10);
+
+	per(b = 0; b <= 10; b++){
+		se(b == 4){
+			stampare(b);		
+		}
+	}
+
+	se(b > 2){
+		tutto c = 0;
+	}altrise(b >= 5){
+		tutto c = 5;
+	}altri{
+		tutto c = 20;
+	}
+
+	a = 'oi' . 'au';
+
+	a = a.'ola';
+
+	out = a.altris;
+
+	<// leggere(b);
+	
+	mentre(true){
+		se(b == 10){
+			rompere;
+		}altri{
+			tutto c = 0;
+		}
+	}
+
+	scelta (b, (
+		caso 9 -> b = 0; rompere; 
+		caso 10 -> b = 1; rompere;
+		caso 11 -> b = 5; rompere;
+		predefinito -> b = 2; rompere;
+	));
+}

@@ -1,0 +1,49 @@
+iniziare principale(){	
+	essere a = 0;
+	a *= 5;
+
+	funzione arriba(boole k = false, tutto p = 0){
+		essere l = 1 + 1;
+	}
+
+	k = arriba();
+
+	essere b = 0.0;
+	b += 4.4;
+	
+	essere c;
+
+	c = "aa";
+
+	essere d = 0, senha = "avoss";
+	
+	<//a = a + (tutto)b;
+
+	essere fusao = c;
+
+	fusao = c . senha;
+	essere float = 4.4999;	
+
+	essere e = 9, f = false, g = 4.4;	
+
+	essere h;
+
+	<//g = 4.4;
+
+	essere i = "bc";
+
+	i = "oi" . "au";
+
+	i .= "arroz";
+
+	essere bla = 45;
+	
+	per(essere j = 0; j < 10; j++){
+		b = 1;
+	}
+
+	funzione tutto arriba(essere k = 0){
+		essere l = 1 + 1;
+		ritorno l;
+	}
+}

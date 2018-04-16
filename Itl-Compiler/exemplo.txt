@@ -1,0 +1,37 @@
+iniziare principale(){	
+	essere f = 0;
+	f *= 5;
+
+	essere c = 0.0;
+	c += 4.4;
+	
+	essere b;
+
+	b = 'aa';
+
+	essere a = 0, senha = 'avoss';
+	
+	<//a = a + (tutto)b;
+
+	essere fusao = b;
+
+	fusao = b . senha;
+	essere float = 4.4999;	
+
+	variabile b = 9, f = false, p = 4.4;	
+
+	variabile g;
+
+	<//g = 4.4;
+
+	variabile a = 'bc';
+
+	a = 'oi' . 'au';
+
+	variabile bla = 45;
+	
+	per(variabile c = 0; c < 10; c++){
+		b = 1;
+	}
+
+}

@@ -1,0 +1,13 @@
+iniziare principale(){	
+
+	funzione tutto arriba(tutto p, tutto j){
+		essere l = 1 + 1;
+		p += 9;
+		ritorno p;
+	}
+		
+	essere k = 4;
+
+	k = arriba(19, 19);
+
+}

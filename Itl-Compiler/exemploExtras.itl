@@ -1,0 +1,18 @@
+essere a = 1 + 1;
+
+iniziare principale(){
+
+	<//Funcao pra cima
+	
+	
+
+	a = a ** 2;
+
+	mentre(vero){
+		mentre(vero){
+			romperetutti;
+		}
+	}
+
+
+}

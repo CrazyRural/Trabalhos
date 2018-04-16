@@ -1,0 +1,77 @@
+iniziare principale(){	
+	<//ISSO É UM COMENTARIO!!!!
+
+	<//TIPAGEM DINAMICA
+	essere lol;
+
+	<//CONCATENAÇAO DINAMICA
+	essere eixo = "foka";
+	eixo .= "au";
+
+	lol = 0;
+
+	<//FOR COM VARIAVEL ++
+	per(essere c = 0; c < 10; c++){
+		lol++;
+	}
+	
+	<//POTENCIAÇAO
+	essere a = 9;
+	a = a ** 2;
+
+	<//Funcao pra cima
+	mentre(vero){
+		mentre(vero){
+			romperetutti;
+		}
+	}
+	<//DO WHILE
+	fare{
+		essere j = 10;
+	}(a !! 10);
+
+	essere b = 0;
+	<//SWTICH
+	scelta (b, (
+		caso 9 -> b = 0; rompere; 
+		caso 10 -> b = 1; rompere;
+		caso 11 -> b = 5; rompere;
+		predefinito -> b = 2; rompere;
+	));
+
+	<//IF
+	se(b > 2){
+		essere c = 0;
+	}altrise(b >= 5){
+		essere c = 5;
+	}altri{
+		essere c = 20;
+	}
+
+	<//FUNCAO COM RAND PARAMETROS SETADOS
+	funzione tutto arriba(tutto p, tutto j = 9, tutto a){
+		essere l = 1 + 1;
+		p += 9;
+		ritorno p;
+	}
+		
+	essere k = 4;
+
+	<//CHAMADA DE FUNCAO COM TIPO DE RETORNO
+	k = arriba(9, 19, 0);
+
+	essere i = "bc";
+
+	i = "oi" . "au";
+
+	i .= "arroz";
+
+	essere f = 0;
+	f *= 5;
+
+
+	>//
+		BLOCO DE COMENTARIO!!!!
+		tutto a = 2;
+	|\<
+}	

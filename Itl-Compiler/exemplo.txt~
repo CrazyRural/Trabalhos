@@ -1,0 +1,24 @@
+iniziare principale(){	
+	variabile b = 9, f = false, p = 4.4;	
+
+	variabile g;
+
+	<//g = 4.4;
+
+	variabile a = 'bc';
+
+	a = 'oi' . 'au';
+
+	variabile bla = 45;
+	
+	per(variabile c = 0; c < 10; c++){
+		b = 1;
+	}
+
+	funzione tutto arriba(variabile j = 0){
+		variabile d = 1 + 1;
+		d++;
+		ritorno 4 + 4 + d;
+	}
+	
+}
