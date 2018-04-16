@@ -19,7 +19,7 @@ iniziare principale(){
 	essere a = 9;
 	a = a ** 2;
 
-	<//Funcao pra cima
+	<//WHILE BREAKALL
 	mentre(vero){
 		mentre(vero){
 			romperetutti;
