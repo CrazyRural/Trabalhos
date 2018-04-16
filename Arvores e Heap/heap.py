@@ -1,6 +1,4 @@
-'''
-	Feito por João Victor Araújo, Julia Rodrigues e Victor Diniz
-'''
+
 class Heap:
 	
 	def __init__ (self, size):

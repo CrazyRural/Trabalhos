@@ -1,6 +1,4 @@
-'''
-	Feito por João Victor Araújo, Julia Rodrigues e Victor Diniz
-'''
+
 class Node:
 	def __init__(self, valor):
 		self.valor = valor
