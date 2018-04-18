@@ -3,17 +3,21 @@ import xmlrpc.client
 
 global s
 s = xmlrpc.client.ServerProxy('http://localhost:8000', allow_none=True)
+
 s.system.listMethods()
 def main():
-	print("\nAperte somente o ENTER a qualquer momento para sair de qualquer escolha e/ou do próprio menu principal.\n")
+	print("Aperte somente o ENTER a qualquer momento para sair de qualquer escolha e/ou do próprio menu principal.\n")
 	while True:
-		escrita = (input("1- Dar Nota ao Aluno em Curso\n2- Consultar Nota do Aluno\n3- Listar Notas do Aluno\n"+
+		escrita = (input("\n1- Dar Nota ao Aluno em Curso\n2- Consultar Nota do Aluno\n3- Listar Notas do Aluno\n"+
 							"4- CR do Aluno\nSua opção: "))
 		if escrita == "":
 			print("Bye!")
 			break
 		print(escrita)
-		seleciona(escrita)()
+		try:
+			seleciona(escrita)()
+		except Exception as e:
+			print("Aperta direito imbecil")
 
 def darNotaAoAluno():
 	while True:

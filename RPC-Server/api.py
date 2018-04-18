@@ -55,7 +55,9 @@ class API():
 		self.cur.execute('SELECT t.nota FROM public.tabelao t WHERE t.matricula ILIKE (%s) AND t.materia ILIKE (%s)',(mat, cod,))
 		row = self.cur.fetchone()
 		self.cur.close()
-		if not row[0]:
+		if not row:
+			return "O aluno não está nessa matéria."
+		elif not row[0]:
 			return "Aluno não possui nota nessa matéria."
 		else:
 			return "Aluno "+mat+ " tirou : "+ str(row[0])
