@@ -61,7 +61,6 @@ function submeter(xml){
 }
 
 function consultarStatus(xml){
-    console.log(xml);
     var form = {
       '': xml.toString(),
     };
