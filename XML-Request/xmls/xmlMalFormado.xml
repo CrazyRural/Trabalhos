@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>submeter</methodName>
+    <params>
+        <param>
+            <boletim>
+                <aluno>
+                    <cpf>0000000001</cpf>
+                    <nome>Hosana Gomes Pinto</nome>
+                    <universidade>Universidade Federal Rural do Rio de Janeiro
+                    </universidade>
+                    <curso>Ciência da Computação<curso>
+                </aluno>
+                <historico>
+                    <periodo>
+                        <ano>2014</ano>
+                        <semestre>1</semestre>
+                        <materia>
+                            <codigo>IM5568</codigo>
+                            <nome>Computação III</nome>
+                            <creditos>4</creditos>
+                            <conceito>10</conceito>
+                            <situacao>AP</situacao>
+                        <materia>
+                    </periodo>
+                </historico>
+            </boletim>
+        </param>
+    </params>
+</methodCall>

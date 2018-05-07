@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>submeter</methodName>
+    <params>
+        <param>
+            <boletim>
+                <aluno>
+                    <cpf>0000000001<cpf>
+                    <nome>Vinicius Nunes Rigoni<nome>
+                    <universidade>Universidade Federal Rural do Rio de Janeiro
+                    </universidade>
+                    <curso>Ciência da Computação</curso>
+                </aluno>
+                <historico>
+                    <periodo>
+                        <ano>2015</ano>
+                        <semestre>2</semestre>
+                        <materia>
+                            <codigo>IM468</codigo>
+                            <nome>Computação II</nome>
+                            <creditos>4</creditos>
+                            <conceito>8</conceito>
+                            <situacao>AP</situacao>
+                        </materia>
+                    </periodo>
+
+
+                    <periodo>
+                        <ano>2015</ano>
+                        <semestre>1</semestre>
+                        <materia>
+                            <codigo>IM355</codigo>
+                            <nome>Arquiterura II</nome>
+                            <creditos>4</creditos>
+                            <conceito>6</conceito>
+                            <situacao>AP</situacao>
+                        </materia>
+                    </periodo>
+                </historico>
+            </boletim>
+        </param>
+    </params>
+</methodCall>

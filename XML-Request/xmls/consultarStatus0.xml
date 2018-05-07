@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>consultarStatus</methodName>
+    <params>
+        <param>
+            <cpf>00000000000</cpf>
+	    <matricula>4444444444</matricula>
+        </param>
+    </params>
+</methodCall>

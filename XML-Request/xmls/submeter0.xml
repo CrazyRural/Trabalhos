@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>submeter</methodName>
+    <params>
+        <param>
+            <boletim>
+                <aluno>
+                    <cpf>000000000001</cpf>
+                    <nome>João Victor Araújo</nome>
+                    <universidade>Universidade Federal Rural do Rio de Janeiro</universidade>
+                    <curso>Ciência da Computação</curso>
+                </aluno>
+                <historico>
+                    <periodo>
+                        <ano>2013</ano>
+                        <semestre>2</semestre>
+                        <materia>
+                            <codigo>IM420</codigo>
+                            <nome>Computação I</nome>
+                            <creditos>4</creditos>
+                            <conceito>6</conceito>
+                            <situacao>AP</situacao>
+                        </materia>
+                    </periodo>
+                </historico>
+            </boletim>
+        </param>
+    </params>
+</methodCall>
+
