@@ -33,6 +33,7 @@ var urlServerMatA = "http://tebd.000webhostapp.com";
 3 - Candidato Aprovado e em Espera
 4 - Candidato Não Aprovado
 */
+
 function submeter(xml){
   var form = {
     '': xml.toString(),
@@ -43,7 +44,7 @@ function submeter(xml){
     headers: {
       'Content-Type': 'text/xml'
     },
-    uri: urlServerMatA,
+    uri: urlServerVin,
     body: xml.toString(),
     method: 'POST'
   }, function (err, res, body) {
