@@ -56,7 +56,7 @@ function submeter(xml){
     console.log(body);
     parser.parseString(body, function (err, result) {
         xmlr = JSON.stringify(result);
-        console.log(xmlr);
+        console.log(result.methodReturn.value[0]);
     });
   });
 }
@@ -83,7 +83,7 @@ function consultarStatus(xml){
       console.log(body);
       parser.parseString(body, function (err, result) {
           xmlr = JSON.stringify(result);
-          console.log(xmlr);
+        console.log(result.methodReturn.value[0]);
       });
     });
 }
