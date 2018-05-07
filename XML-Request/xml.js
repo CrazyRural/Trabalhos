@@ -18,7 +18,7 @@ var xmlj, xsdD, xsd, xml, xml1, xmlD, dom ;
 var urlServerVin = "http://ruralruby.dlinkddns.com:8011";
 var urlServerMatA = "http://tebd.000webhostapp.com";
 
-require('request-debug')(request);
+//require('request-debug')(request);
 /*
 0 - Sucesso
 1 - XML inválido
@@ -41,7 +41,6 @@ function submeter(xml){
   var contentLength = formData.length;
   request({
     headers: {
-      'Content-Length': contentLength,
       'Content-Type': 'text/xml'
     },
     uri: urlServerMatA,
@@ -103,6 +102,6 @@ function main(nomeArquivo, funcao){
         return true;
     });
 }
-//var result = main('consultarStatus1.xml', 2);
+var result = main('consultarStatus1.xml', 2);
 var result2 = main('submeter0.xml', 1);
 
