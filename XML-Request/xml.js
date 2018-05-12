@@ -1,22 +1,15 @@
 var fs = require('fs');
 var request = require('request');
-var http = require('http');
-var xsdval = require('libxmljs');
 var xml2js = require('xml2js');
-var parser = require('xml2json');
-var querystring = require('querystring');
-var xslt4node = require('xslt4node');
-var DOMParser = require('xmldom').DOMParser;
-var parserd = new DOMParser();
-
 var parser = xml2js.Parser();
-var xmlj, xsdD, xsd, xml, xml1, xmlD, dom ;
+var xmlj, xsdD, xsd, xml, xml1, xmlD, dom;
 
 // Vinicius - "http://ruralruby.dlinkddns.com:8011" = Get
 // Matheus - "http://tebd.000webhostapp.com" = Get/Post
 
-var urlServerVin = "http://ruralruby.dlinkddns.com:8011";
-var urlServerMatA = "http://tebd.000webhostapp.com";
+var urlServerRaf = "http://10.10.4.128:8011";
+var urlServerMatA = "http://10.10.8.87:8080";
+var urlServerVin = "http://10.10.6.156:8011";
 
 //require('request-debug')(request);
 /*
@@ -34,64 +27,89 @@ var urlServerMatA = "http://tebd.000webhostapp.com";
 4 - Candidato Não Aprovado
 */
 
-function submeter(xml){
-  var form = {
-    '': xml.toString(),
-  };
-  var formData = querystring.stringify(xml);
-  var contentLength = formData.length;
-  request({
-    headers: {
-      'Content-Type': 'text/xml'
-    },
-    uri: urlServerVin,
-    body: xml.toString(),
-    method: 'POST'
-  }, function (err, res, body) {
-    if (err) {
-      return console.error('Submeter -> Erro', err);
-    }
-    console.log('Submeter -> sucesso!');
-    dom = parserd.parseFromString(body,"text/xml");
-    console.log(body);
-    parser.parseString(body, function (err, result) {
-        xmlr = JSON.stringify(result);
-        console.log(result.methodReturn.value[0]);
-    });
-  });
-}
-
-function consultarStatus(xml){
-    var form = {
-      '': xml.toString(),
-    };
-    var formData = querystring.stringify(xml);
-    var contentLength = formData.length;
+function submeter(xml) {
     request({
-      headers: {
-        'Content-Type': 'text/xml'
-      },
-      uri: urlServerMatA,
-      body: xml.toString(),
-      method: 'GET'
-    }, function (err, res, body) {
-      if (err) {
-        return console.error('Consultar -> Erro', err);
-      }
-      console.log('Consultar -> sucesso!');
-      dom = parserd.parseFromString(body,"text/xml");
-      console.log(body);
-      parser.parseString(body, function (err, result) {
-          xmlr = JSON.stringify(result);
-        console.log(result.methodReturn.value[0]);
-      });
+        headers: {
+            'Content-Type': 'text/xml'
+        },
+        uri: urlServerRaf,
+        body: xml.toString(),
+        method: 'POST'
+    }, function(err, res, body) {
+        if (err) {
+            return console.error('Submeter -> Erro', err);
+        }
+        console.log('Submeter -> sucesso!');
+        console.log(body);
+        parser.parseString(body, function(err, result) {
+            xmlr = JSON.stringify(result);
+            var sw = result.methodReturn.value[0];
+            switch (sw) {
+                case '0':
+                    console.log("Sucesso");
+                    break;
+                case '-1':
+                    console.log("XML inválido");
+                    break;
+                case '1':
+                    console.log("XML inválido");
+                    break;
+                case '-2':
+                    console.log("XML mal-formado");
+                    break;
+                case '2':
+                    console.log("XML mal-formado");
+                    break;
+                case '3':
+                    console.log("Erro Interno");
+                    break;
+            }
+        });
     });
 }
 
-function main(nomeArquivo, funcao){
-    fs.readFile(__dirname+'/xmls/'+ nomeArquivo, 'utf-8', function(err, buf) {
-        if(err) { console.log("File not Found!"); return;}
-        switch(funcao){
+function consultarStatus(xml) {
+    request({
+        headers: {
+            'Content-Type': 'text/xml'
+        },
+        uri: urlServerRaf, //+'?='+xml.toString(),
+        body: xml.toString(),
+        method: 'GET'
+    }, function(err, res, body) {
+        if (err) {
+            return console.error('Consultar -> Erro', err);
+        }
+        console.log('Consultar -> sucesso!');
+        console.log(body);
+        parser.parseString(body, function(err, result) {
+            xmlr = JSON.stringify(result);
+            var sw = result.methodReturn.value[0];
+            switch (sw) {
+                case '0':
+                    console.log("Candidato não encontrado");
+                    break;
+                case '1':
+                    console.log("Em processamento");
+                    break;
+                case '2':
+                    console.log("Candidato Aprovado e Selecionado");
+                    break;
+                case '3':
+                    console.log("Candidato Aprovado e em Espera");
+                    break;
+                case '4':
+                    console.log("Candidato Não Aprovado");
+                    break;
+            }
+        });
+    });
+}
+
+function main(nomeArquivo, funcao) {
+    fs.readFile(__dirname + '/xmls/' + nomeArquivo, 'utf-8', function(err, buf) {
+        if (err) { console.log("Arquivo não encontrado!"); return; }
+        switch (funcao) {
             case 1:
                 submeter(buf);
                 break;
@@ -104,4 +122,3 @@ function main(nomeArquivo, funcao){
 }
 var result = main('consultarStatus1.xml', 2);
 var result2 = main('submeter0.xml', 1);
-
